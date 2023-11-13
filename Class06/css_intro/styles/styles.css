@@ -1,0 +1,33 @@
+* {
+  background-color: antiquewhite;
+}
+
+h1 {
+  background-color: aquamarine;
+}
+
+article {
+  /* color: brown !important; */
+  color: brown;
+}
+
+#article-h5 {
+  color: chocolate;
+  font-size: large;
+}
+
+li > a {
+  background-color: burlywood;
+}
+
+li a {
+  background-color: burlywood;
+}
+
+#article-h5 + p {
+  background-color: goldenrod;
+}
+
+#my-h1-element ~ p {
+  background-color: deeppink;
+}
