@@ -47,7 +47,7 @@
 
 h3 {
   text-transform: uppercase;
-  text-decoration: underline dotted overline line-through red;
+  text-decoration: underline overline line-through dotted red;
   text-decoration-thickness: 5px;
 }
 
