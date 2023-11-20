@@ -1,0 +1,41 @@
+.image-block-paragraph {
+  width: 100px;
+}
+
+.block-header {
+  background-color: coral;
+  width: 70%;
+  height: 100px;
+}
+
+.block-paragraph {
+  background-color: cadetblue;
+}
+
+.block-ol {
+  background-color: aqua;
+}
+
+.block-div {
+  background-color: bisque;
+  width: 100px;
+  display: inline;
+}
+
+.inline-span {
+  background-color: crimson;
+  height: 100px; /*won't apply because it is an inline element*/
+  width: 200px;
+}
+
+.inline-strong {
+  background-color: cornflowerblue;
+}
+
+sup {
+  display: block;
+}
+
+u {
+  display: block;
+}
