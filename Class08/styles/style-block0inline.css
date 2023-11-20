@@ -39,3 +39,27 @@ sup {
 u {
   display: block;
 }
+
+.container {
+  text-align: center;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: cyan;
+  border: 1px solid blue;
+  margin: 10px;
+}
+
+.combined-box {
+  display: inline-block;
+}
+
+.test {
+  background-color: blueviolet;
+}
+
+#specific-box {
+  width: 250px;
+}
