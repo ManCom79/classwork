@@ -33,3 +33,14 @@ console.log(comparison3);
 console.log("-------------------");
 console.log(comparison1 && comparison2);
 console.log(!comparison2 || comparison3);
+
+//Truthy values
+console.log(false && 5 == 6);
+console.log("Cat" && 50);
+console.log("Cat" && 0);
+console.log(0 && "Cat");
+
+console.log(false || 5 == 6);
+console.log("Cat" || 50);
+console.log("Cat" || 0);
+console.log(0 || "Cat");
