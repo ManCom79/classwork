@@ -25,3 +25,6 @@ if (scorePoints <= 60) {
 } else {
   console.log("Your grade is A!");
 }
+
+let userNumber = prompt("Enter your score:");
+console.log(`Your score is ${userNumber}.`);
