@@ -82,3 +82,39 @@ function testReturn() {
 
 let testReturnValue = testReturn();
 console.log(testReturnValue);
+
+console.log("-----------Schoolwork Exercises-----------");
+
+let inputNum1 = prompt("Enter first number");
+let num1 = parseInt(inputNum1);
+let inputNum2 = prompt("Enter second number:");
+let num2 = parseInt(inputNum2);
+
+function sum(num1, num2) {
+  let resultSum = num1 + num2;
+  return resultSum;
+}
+
+function subtract(num1, num2) {
+  let resultSum = num1 - num2;
+  return resultSum;
+}
+
+function multiply(num1, num2) {
+  let resultSum = num1 * num2;
+  return resultSum;
+}
+
+function divide(num1, num2) {
+  let resultSum = num1 / num2;
+  return resultSum;
+}
+
+let summedNumbers = sum(num1, num2);
+console.log(`Sum of ${num1} and ${num2} is ${summedNumbers}`);
+let subtractedNumbers = subtract(num1, num2);
+console.log(`Difference between ${num1} and ${num2} is ${subtractedNumbers}`);
+let multipliedNumbers = multiply(num1, num2);
+console.log(`Product of ${num1} and ${num2} is ${multipliedNumbers}`);
+let divideNumbers = divide(num1, num2);
+console.log(`Quotient of ${num1} and ${num2} is ${divideNumbers}`);
