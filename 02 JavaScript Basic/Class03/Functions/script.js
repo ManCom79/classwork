@@ -96,18 +96,18 @@ function sum(num1, num2) {
 }
 
 function subtract(num1, num2) {
-  let resultSum = num1 - num2;
-  return resultSum;
+  let resultSubtract = num1 - num2;
+  return resultSubtract;
 }
 
 function multiply(num1, num2) {
-  let resultSum = num1 * num2;
-  return resultSum;
+  let resultMultiply = num1 * num2;
+  return resultMultiply;
 }
 
 function divide(num1, num2) {
-  let resultSum = num1 / num2;
-  return resultSum;
+  let resultDivision = num1 / num2;
+  return resultDivision;
 }
 
 let summedNumbers = sum(num1, num2);
