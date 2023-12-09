@@ -84,6 +84,7 @@ let testReturnValue = testReturn();
 console.log(testReturnValue);
 
 console.log("-----------Schoolwork Exercises-----------");
+// Write 4 funstions that take two parameters and output result of addition, subtraction, multiplication and division
 
 let inputNum1 = prompt("Enter first number");
 let num1 = parseInt(inputNum1);
