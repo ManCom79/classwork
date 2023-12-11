@@ -119,3 +119,34 @@ let multipliedNumbers = multiply(num1, num2);
 console.log(`Product of ${num1} and ${num2} is ${multipliedNumbers}`);
 let divideNumbers = divide(num1, num2);
 console.log(`Quotient of ${num1} and ${num2} is ${divideNumbers}`);
+
+// Default (Optional) parameters
+function logData(data1, data2, data3 = "default value") {
+  console.log(`Data 1: ${data1}`);
+  console.log(`Data 2: ${data2}`);
+  console.log(`Data 3: ${data3}`);
+}
+
+logData(23, 50, 100);
+logData(23, 50);
+
+// -----------------EXERCISE----------------------
+
+function calculateAge(birthYear) {
+  const date = newDate();
+  let currentYear = date.getFullYear();
+  let result = currentYear - burthYear;
+  return result;
+}
+
+function printAge(age) {
+  console.log(`You are ${age} years old.`);
+}
+
+let userInput = prompt("Enter birth year:");
+let parsedInput = Number(userInput);
+
+if (!number.isNan(parsedInput)) {
+  let age = calculateAge(parsedInput);
+  printAge(age);
+}
