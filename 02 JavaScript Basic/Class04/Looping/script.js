@@ -52,3 +52,49 @@ findLargestValue(tenNumber);
 console.log("");
 
 console.log("------For Loop------");
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+for (let i = 5; i >= 0; i--) {
+  console.log(i);
+}
+
+let cities = ["Skopje", "Miami", "Tokyo", "Prilep"];
+
+for (let i = 0; i < cities.length; i++) {
+  let cityInfo = `City #${i + 1}: ${cities[i]}`;
+  if (cities[i] === "Miami") {
+    cityInfo += "=> I would like to go there.";
+  }
+  console.log(cityInfo);
+}
+console.log("");
+
+console.log("------For-of Loop------"); //no counter, we go through all elements in array
+for (let city of cities) {
+  console.log(city);
+}
+
+console.log("");
+
+console.log("------Break and Continue------"); //when the loop to stop
+
+let numbers = [1, 23, 40, 50, 30, 41, 23];
+
+for (let j = 0; j < numbers.length; j++) {
+  if (numbers[j] === 40) {
+    console.log(`Found 40 at index ${j}! Exiting the loop.`);
+    break;
+  }
+  console.log(j);
+}
+console.log("");
+for (let number of numbers) {
+  if (number % 4 === 0) {
+    console.log(`The number ${number} is divisible by 4`);
+    continue;
+  }
+  console.log(`The number ${number} is NOT divisible by 4`);
+}
