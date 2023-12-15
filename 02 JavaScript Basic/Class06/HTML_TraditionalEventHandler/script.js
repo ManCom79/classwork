@@ -21,4 +21,8 @@ function hiGreeting() {
 myButton.onclick = btnClick;
 mySecondButton.onclick = btnClick;
 
+//...imaginary sample code here (Point: second event handler overwrites the first event listener.)
+
+mySecondButton.onclick = greeting;
+
 myDiv.onmouseover = greeting;
