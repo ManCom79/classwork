@@ -24,8 +24,16 @@ function secondButtonClicked() {
 //   alert("Hello from our event listener in the annonymus function!");
 // });
 
-myButton.addEventListener("click", function () {
-  buttonClicked();
-  secondButtonClicked();
-  alert("Hello again after the two functions!");
+// myButton.addEventListener("click", function () {
+//   buttonClicked();
+//   secondButtonClicked();
+//   alert("Hello again after the two functions!");
+// });
+
+myButton.addEventListener("click", function (event) {
+  console.log(event);
+  //get to which element in HTML the event is targeted
+  console.log(event.target);
+  //get the value of the targeted HTML element
+  console.log(event.target.value);
 });
