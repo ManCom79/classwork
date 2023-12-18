@@ -36,4 +36,8 @@ console.log(person);
 let person2 = {};
 person2["height"] = 185;
 person2["gender"] = "male";
+person2["hobbies"] = ["hiking", "swimming", "gaming"];
 console.log(person2);
+
+console.log(`Person2: ${person2.hasOwnProperty("gender")}`);
+console.log(`Person2: ${person2.hasOwnProperty("salary")}`);
