@@ -91,5 +91,9 @@ function VehicleCreator(
 }
 
 let fico = new VehicleCreator("car", "Fiat", "500", 1983, "gassoline");
-
 console.log(fico.getInfo());
+
+let pegla = new VehicleCreator("car", "Fiat", "polski", 1970, "gassoline");
+console.log(pegla.getInfo());
+
+console.log(fico.getInfo(), " AND ", pegla.getInfo());
