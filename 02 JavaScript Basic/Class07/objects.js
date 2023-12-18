@@ -41,3 +41,30 @@ console.log(person2);
 
 console.log(`Person2: ${person2.hasOwnProperty("gender")}`);
 console.log(`Person2: ${person2.hasOwnProperty("salary")}`);
+
+let car = {
+  make: "Honda",
+  model: "Civic",
+  fuel: "Gasoline",
+  productionYear: "2020",
+
+  move: function () {
+    console.log("The car is moving.");
+  },
+
+  start: function () {
+    console.log("The car is starting.");
+  },
+
+  stop: function () {
+    console.log("The car is stopping.");
+  },
+};
+
+console.log(car);
+
+delete car.productionYear;
+
+car.model = "Jazz";
+
+console.log(car);
