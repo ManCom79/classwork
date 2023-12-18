@@ -10,6 +10,10 @@ let person = {
       `The person in case is ${this.age} years old, is ${this.heigth} cm tall, is ${this.maritalStatus} and is ${this.employmentStatus}. It seems that this person is ${this.happy} hero.`
     );
   },
+
+  describe: function () {
+    console.log(`Name of the person is ${this.name} ${this.surname}`);
+  },
 };
 
 console.log(person);
@@ -23,6 +27,17 @@ person["happy"] = false;
 
 console.log(person);
 console.log(person.character());
+
+delete person.maritalStatus;
+
+console.log(person);
+console.log(person.character());
+
+person.name = "Bob";
+person.surname = "Bobsky";
+
+console.log(person);
+console.log(person.describe());
 
 // //Second
 // let person1 = new Object();
