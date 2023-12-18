@@ -69,3 +69,27 @@ car.model = "Jazz";
 car["fuel"] = "Diesel";
 
 console.log(car);
+
+//Creating constructor function
+
+function VehicleCreator(
+  vehicleType,
+  vehicleMake,
+  vehicleModel,
+  yearOfProduction,
+  vehicleFuel
+) {
+  this.type = vehicleType;
+  this.make = vehicleMake;
+  this.model = vehicleModel;
+  this.year = yearOfProduction;
+  this.fuel = vehicleFuel;
+
+  this.getInfo = function () {
+    return `The vehicle of type ${this.type} and made ${this.make} and model ${this.model} which is produced in ${this.year} uses ${this.fuel}`;
+  };
+}
+
+let fico = new VehicleCreator("car", "Fiat", "500", 1983, "gassoline");
+
+console.log(fico.getInfo());
