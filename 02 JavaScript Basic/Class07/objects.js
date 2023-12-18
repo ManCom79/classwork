@@ -66,5 +66,6 @@ console.log(car);
 delete car.productionYear;
 
 car.model = "Jazz";
+car["fuel"] = "Diesel";
 
 console.log(car);
