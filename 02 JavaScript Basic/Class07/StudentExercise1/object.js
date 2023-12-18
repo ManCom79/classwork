@@ -39,6 +39,12 @@ person.surname = "Bobsky";
 console.log(person);
 console.log(person.describe());
 
+person.addingFunction = function () {
+  console.log("This is an added function!!!");
+};
+
+console.log(person.addingFunction());
+
 // //Second
 // let person1 = new Object();
 // person1.age = 44;
