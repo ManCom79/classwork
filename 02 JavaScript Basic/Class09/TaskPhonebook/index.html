@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonebook</title>
+  </head>
+  <body>
+    <div id="inputSection">
+      <label for="firstName">First Name: </label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+      />
+      <br />
+      <br />
+      <label for="lastName">Last Name: </label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="Last Name"
+      />
+      <br />
+      <br />
+      <label for="phoneNumber">Phone Number: </label>
+      <input
+        type="text"
+        name="phoneNumber"
+        id="phoneNumber"
+        placeholder="Phone Number"
+      />
+    </div>
+    <br />
+    <br />
+    <div>
+      <button id="saveButton">Save</button>
+    </div>
+    <br />
+    <br />
+    <div id="tableHolder">
+      <table id="table" border="1px">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
