@@ -21,3 +21,5 @@ function sumArrayOfNumbersBlock(array) {
 }
 
 sumArrayOfNumbersBlock([1, 4, 7, 9]);
+
+//HOISTING - Global functions are always palced at top of the code by JavaScript, when the file is run. This means global function can be called even before it is declared. Hoisting does not work for annonymous and arrow functions.
