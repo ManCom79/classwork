@@ -13,3 +13,7 @@
     console.log(fruits[i]);
   }
 })();
+
+((message) => console.log(message))(
+  "This message is passed as an argument to the self involved function."
+);
