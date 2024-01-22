@@ -49,7 +49,7 @@ function renderPeopleTable(pilotArray, tableHolderElement) {
     <tbody>`;
   for (let i = 0; i < pilotArray.length; i++) {
     tableHolderElement.innerHTML += `
-        <tr>
+        <tr id="${i}">
             <td>${pilotArray[i].pilotName}</td>
             <td>${pilotArray[i].pilotHeight}</td>
             <td>${pilotArray[i].pilotMass}</td>
