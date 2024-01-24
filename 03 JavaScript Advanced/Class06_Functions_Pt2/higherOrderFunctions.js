@@ -24,3 +24,7 @@ console.log(numbersToSort);
 const students = ["gre", "asd", "ko", "rth"];
 students.sort((a, b) => a.localeCompare(b));
 console.log(students);
+
+//includes
+const studentsIncludeIvan = students.includes("Ivan");
+console.log(studentsIncludeIvan);
