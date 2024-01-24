@@ -63,4 +63,31 @@ const greetInEnglish = greetingGenerator("english");
 const greetInSpanish = greetingGenerator("spanish");
 const greetInFrench = greetingGenerator("french");
 
-greetInSpanish("Pablo");
+// greetInSpanish("Pablo");
+
+//////////////////////////// A FUNCTION WITH PROPERTIES AND A METHOD
+const taskHandler = (taskName) => {
+  return `Task ${taskName} completerd.`;
+};
+//adding properties to function (as on object)
+taskHandler.defaultTask = "learn coding";
+taskHandler.description = "this is a task handler function";
+//get property of function
+console.log(taskHandler.defaultTask);
+const defaultTaskResult = taskHandler(taskHandler.defaultTask);
+console.log(defaultTaskResult);
+
+//adding method to a function
+taskHandler.customTaskResult = (taskName, customAction) => {
+  //this is method actually
+  return `The result for the task ${taskName}: ${customAction}`;
+};
+
+const customResult = taskHandler.customTaskResult(
+  "play soccer",
+  (() => {
+    return `still in progres.`;
+  })()
+);
+
+console.log(customResult);
