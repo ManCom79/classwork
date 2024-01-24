@@ -15,3 +15,12 @@ console.log(positiveNumbers);
 //reduce
 const sum = numbers.reduce((acc, curr) => acc + curr, 0);
 console.log(sum);
+
+//sort
+const numbersToSort = [2, 4, 1, 67, 87, -55, -12, 7 - 1];
+numbersToSort.sort((a, b) => a - b);
+console.log(numbersToSort);
+
+const students = ["gre", "asd", "ko", "rth"];
+students.sort((a, b) => a.localeCompare(b));
+console.log(students);
