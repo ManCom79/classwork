@@ -11,3 +11,7 @@ numbers.forEach((num) => console.log(num));
 //filter
 const positiveNumbers = numbers.filter((num) => num > 0);
 console.log(positiveNumbers);
+
+//reduce
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);
