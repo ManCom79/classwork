@@ -49,15 +49,15 @@ function renderPeopleTable(pilotArray, tableHolderElement) {
     <tbody>`;
   for (let i = 0; i < pilotArray.length; i++) {
     tableHolderElement.innerHTML += `
-        <tr id="${i}">
-            <td>${pilotArray[i].pilotName}</td>
-            <td>${pilotArray[i].pilotHeight}</td>
-            <td>${pilotArray[i].pilotMass}</td>
-            <td>${pilotArray[i].pilotGender}</td>
-            <td>${pilotArray[i].pilotBirthYear}</td>
-            <td>${pilotArray[i].pilotAppearences}</td>
-        </tr>
-        `;
+            <tr>
+                <td>${pilotArray[i].pilotName}</td>
+                <td>${pilotArray[i].pilotHeight}</td>
+                <td>${pilotArray[i].pilotMass}</td>
+                <td>${pilotArray[i].pilotGender}</td>
+                <td>${pilotArray[i].pilotBirthYear}</td>
+                <td>${pilotArray[i].pilotAppearences}</td>
+            </tr>
+            `;
   }
   tableHolderElement.innerHTML += `
     </tbody>
