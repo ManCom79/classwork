@@ -28,6 +28,12 @@
   height: 150px;
 }
 
+#tableHolder{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 #buttons {
   display: flex;
   justify-content: center;

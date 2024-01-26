@@ -37,7 +37,7 @@ function createPilotObject(
 
 function renderPeopleTable(pilotArray, tableHolderElement) {
   tableHolderElement.innerHTML = `
-  <table border="1">
+  <table border="1px solid black">
     <thead>
         <th>Name</th>
         <th>Height</th>
@@ -46,23 +46,25 @@ function renderPeopleTable(pilotArray, tableHolderElement) {
         <th>Birth Year</th>
         <th>Appearences</th> 
     </thead>
-    <tbody>`;
-  for (let i = 0; i < pilotArray.length; i++) {
-    tableHolderElement.innerHTML += `
-            <tr>
-                <td>${pilotArray[i].pilotName}</td>
-                <td>${pilotArray[i].pilotHeight}</td>
-                <td>${pilotArray[i].pilotMass}</td>
-                <td>${pilotArray[i].pilotGender}</td>
-                <td>${pilotArray[i].pilotBirthYear}</td>
-                <td>${pilotArray[i].pilotAppearences}</td>
-            </tr>
-            `;
-  }
-  tableHolderElement.innerHTML += `
+    <tbody id="bodyOfTable">
     </tbody>
 </table>
-`;
+`
+let bodyOfTable = document.getElementById("bodyOfTable")
+for (let i = 0; i < pilotArray.length; i++) {
+  bodyOfTable.innerHTML += `
+          <tr>
+              <td>${pilotArray[i].pilotName}</td>
+              <td>${pilotArray[i].pilotHeight}</td>
+              <td>${pilotArray[i].pilotMass}</td>
+              <td>${pilotArray[i].pilotGender}</td>
+              <td>${pilotArray[i].pilotBirthYear}</td>
+              <td>${pilotArray[i].pilotAppearences}</td>
+          </tr>
+          `;
+}
+;
+console.log(tableHolderElement);
 }
 
 function callPilotsApi() {
