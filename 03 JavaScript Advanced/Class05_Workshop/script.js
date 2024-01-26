@@ -37,7 +37,7 @@ function createPilotObject(
 
 function renderPeopleTable(pilotArray, tableHolderElement) {
   tableHolderElement.innerHTML = `
-  <table border="1px solid black">
+  <table class="table table-hover table-bordered">
     <thead>
         <th>Name</th>
         <th>Height</th>
