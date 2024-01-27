@@ -35,3 +35,41 @@ console.log(studentsIncludeIvan);
 //find
 const foundUser = users.find((user) => user.age === 42);
 console.log(foundUser);
+
+//reverse
+const originalArrayReverse = [1, 2, 3, 4, 5];
+// console.log(originalArrayReverse);
+// originalArrayReverse.reverse();
+// console.log(originalArrayReverse);
+
+// let newArr = originalArrayReverse; // will not make a new copy
+// newArr.reverse();
+
+// console.log("Original " + originalArrayReverse);
+// console.log("New " + newArr);
+
+let newArr = originalArrayReverse.slice();
+let newArr2 = [...originalArrayReverse]; //spread operator
+
+newArr.reverse();
+newArr2.reverse();
+
+console.log(newArr);
+console.log(newArr2);
+
+//reverse i-th string
+const originalString = "Hello World";
+const reversedString = originalString.split("").reverse().join("");
+
+console.log(reversedString);
+
+// indexOf
+const students1 = ["gre", "asd", "ko", "ko", "rth"];
+const indexOfStudent1 = students1.indexOf("ko");
+const indexOfStudent2 = students1.indexOf("kokoko");
+console.log(indexOfStudent1); //returns index of first found
+console.log(indexOfStudent2); // returns -1
+
+//findIndex
+let indexOfUser = users.findIndex((user) => user.age === 34); //returns first found index
+console.log(indexOfUser);
