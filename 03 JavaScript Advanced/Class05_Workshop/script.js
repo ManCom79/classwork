@@ -93,11 +93,12 @@ btnNext.addEventListener("click", async () => {
     btnNext.style.visibility = "hidden";
     btnPrevious.style.visibility = "visible";
   } else {
-    counter = counter + 1;
     transformPeopleData(data);
     btnPrevious.style.visibility = "visible";
     btnNext.style.visibility = "visible";
   }
+  counter = counter + 1;
+  console.log(counter);
 });
 
 btnPrevious.addEventListener("click", async () => {
@@ -109,8 +110,9 @@ btnPrevious.addEventListener("click", async () => {
     btnPrevious.style.visibility = "hidden";
     btnNext.style.visibility = "visible";
   } else {
-    counter = counter - 1;
     transformPeopleData(data);
     btnNext.style.visibility = "visible";
   }
+  counter = counter - 1;
+  console.log(counter);
 });
