@@ -1,4 +1,7 @@
 let pilotImage = document.getElementById("pilotImage");
+let nextButton = document.getElementById("btnNext");
+let btnPrevious = document.getElementById("btnPrevious");
+let counter = 1;
 
 function transformPeopleData(response) {
   let tableHolder = document.getElementById("tableHolder");
@@ -49,10 +52,10 @@ function renderPeopleTable(pilotArray, tableHolderElement) {
     <tbody id="bodyOfTable">
     </tbody>
 </table>
-`
-let bodyOfTable = document.getElementById("bodyOfTable")
-for (let i = 0; i < pilotArray.length; i++) {
-  bodyOfTable.innerHTML += `
+`;
+  let bodyOfTable = document.getElementById("bodyOfTable");
+  for (let i = 0; i < pilotArray.length; i++) {
+    bodyOfTable.innerHTML += `
           <tr>
               <td>${pilotArray[i].pilotName}</td>
               <td>${pilotArray[i].pilotHeight}</td>
@@ -62,9 +65,7 @@ for (let i = 0; i < pilotArray.length; i++) {
               <td>${pilotArray[i].pilotAppearences}</td>
           </tr>
           `;
-}
-;
-console.log(tableHolderElement);
+  }
 }
 
 function callPilotsApi() {
@@ -73,10 +74,43 @@ function callPilotsApi() {
       return response.json();
     })
     .then(function (response) {
+      console.log(response);
       transformPeopleData(response);
+      btnNext.style.visibility = "visible";
     });
 }
 
 pilotImage.addEventListener("click", function () {
   callPilotsApi();
+});
+
+btnNext.addEventListener("click", async () => {
+  let url = `https://swapi.dev/api/people/?page=${counter + 1}`;
+  let response = await fetch(url);
+  let data = await response.json();
+  if (data.next === null) {
+    transformPeopleData(data);
+    btnNext.style.visibility = "hidden";
+    btnPrevious.style.visibility = "visible";
+  } else {
+    counter = counter + 1;
+    transformPeopleData(data);
+    btnPrevious.style.visibility = "visible";
+    btnNext.style.visibility = "visible";
+  }
+});
+
+btnPrevious.addEventListener("click", async () => {
+  let url = `https://swapi.dev/api/people/?page=${counter - 1}`;
+  let response = await fetch(url);
+  let data = await response.json();
+  if (data.previous === null) {
+    transformPeopleData(data);
+    btnPrevious.style.visibility = "hidden";
+    btnNext.style.visibility = "visible";
+  } else {
+    counter = counter - 1;
+    transformPeopleData(data);
+    btnNext.style.visibility = "visible";
+  }
 });
