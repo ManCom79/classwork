@@ -86,6 +86,8 @@ function callStarshipApi() {
 }
 
 spaceShipImage.addEventListener("click", function () {
+  counter = 1;
+  btnPrevious.style.visibility = "hidden";
   callStarshipApi();
 });
 
@@ -169,6 +171,8 @@ function callPilotsApi() {
 }
 
 pilotImage.addEventListener("click", function () {
+  counter = 1;
+  btnPrevious.style.visibility = "hidden";
   callPilotsApi();
 });
 
@@ -176,31 +180,56 @@ btnNext.addEventListener("click", async () => {
   let url = `https://swapi.dev/api/${currentHandler}/?page=${counter + 1}`;
   let response = await fetch(url);
   let data = await response.json();
-  if (data.next === null) {
-    transformPeopleData(data);
-    btnNext.style.visibility = "hidden";
-    btnPrevious.style.visibility = "visible";
+
+  if (currentHandler === "people") {
+    if (data.next === null) {
+      transformPeopleData(data);
+      btnNext.style.visibility = "hidden";
+      btnPrevious.style.visibility = "visible";
+    } else {
+      transformPeopleData(data);
+      btnPrevious.style.visibility = "visible";
+      btnNext.style.visibility = "visible";
+    }
+    counter = counter + 1;
   } else {
-    transformPeopleData(data);
-    btnPrevious.style.visibility = "visible";
-    btnNext.style.visibility = "visible";
+    if (data.next === null) {
+      transformStarshipsData(data);
+      btnNext.style.visibility = "hidden";
+      btnPrevious.style.visibility = "visible";
+    } else {
+      transformStarshipsData(data);
+      btnPrevious.style.visibility = "visible";
+      btnNext.style.visibility = "visible";
+    }
+    counter = counter + 1;
   }
-  counter = counter + 1;
-  console.log(counter);
 });
 
 btnPrevious.addEventListener("click", async () => {
   let url = `https://swapi.dev/api/${currentHandler}/?page=${counter - 1}`;
   let response = await fetch(url);
   let data = await response.json();
-  if (data.previous === null) {
-    transformPeopleData(data);
-    btnPrevious.style.visibility = "hidden";
-    btnNext.style.visibility = "visible";
+
+  if (currentHandler === "people") {
+    if (data.previous === null) {
+      transformPeopleData(data);
+      btnPrevious.style.visibility = "hidden";
+      btnNext.style.visibility = "visible";
+    } else {
+      transformPeopleData(data);
+      btnNext.style.visibility = "visible";
+    }
+    counter = counter - 1;
   } else {
-    transformPeopleData(data);
-    btnNext.style.visibility = "visible";
+    if (data.previous === null) {
+      transformStarshipsData(data);
+      btnPrevious.style.visibility = "hidden";
+      btnNext.style.visibility = "visible";
+    } else {
+      transformStarshipsData(data);
+      btnNext.style.visibility = "visible";
+    }
+    counter = counter - 1;
   }
-  counter = counter - 1;
-  console.log(counter);
 });
