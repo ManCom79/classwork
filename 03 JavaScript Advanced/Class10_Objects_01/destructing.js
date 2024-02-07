@@ -110,3 +110,37 @@ console.log(first, sec, thir);
 //with destructuring
 const [itemOne, itemTwo, , itemFour] = testArray;
 console.log(itemOne, itemTwo, itemFour);
+
+console.log("----- SPREAD OPERATOR -----");
+
+console.log(Math.max(123, 23, 434, 1000, 400));
+
+let numbers = [123, 23, 434, 1000, 400];
+console.log(Math.max(...numbers));
+
+console.log(...numbers);
+
+const dogs = ["a", "b"];
+const cats = ["c", "d"];
+
+const allPets = [...dogs, ...cats];
+console.log(allPets);
+
+const dogsCopy = [...dogs];
+
+//SPREAD WITH OBJECTS
+//merge objects into one object
+
+const dog = {
+  name: "Ax",
+  breed: "Pug",
+};
+
+const dogDescription = {
+  group: "Toy",
+  color: "green",
+  origin: "China",
+};
+
+const dogInfo = { ...dog, ...dogDescription };
+console.log(dogInfo);
