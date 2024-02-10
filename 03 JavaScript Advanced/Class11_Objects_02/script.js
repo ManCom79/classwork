@@ -53,3 +53,4 @@ let jill = new User("Jill", "jill@mail.com");
 
 jill.isPremium = true;
 boby.isAdmin = true;
+log;
